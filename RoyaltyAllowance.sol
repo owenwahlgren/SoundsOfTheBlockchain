@@ -16,7 +16,7 @@ contract RoyaltyAllowance {
         _;
     }
 
-    recieve() external payable {
+    receive() external payable {
 
         for(uint i = 0; i < members.length; i++) {
             allowance[members[i]] += (msg.value * shares[i]) / 100;
